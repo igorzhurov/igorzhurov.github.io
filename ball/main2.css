@@ -1,0 +1,123 @@
+.port img {
+  max-width: 100%;
+  display: block;
+}
+
+.port ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.port li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.port li:hover .descr {
+  display: block;
+  opacity: 0;
+  transform: scale(1.2) rotate(0deg);
+}
+
+.descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/audio.jpg");
+  background-color: black;
+  color: #fff;
+  padding-top: 0px;
+  opacity: 0.3;
+  transform: scale(1) rotate(0deg);
+  text-align: center;
+  text-valign: center;
+  -webkit-transition: ease-out all 5s;
+  -o-transition: ease-out all 5s;
+  transition: ease-out all 5s;
+}
+
+.bc {
+  margin: 0;
+}
+
+p {
+  text-align: center;
+  font-family: BeerRegular;
+  color: black;
+  font-size: 12pt;
+}
+
+a {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.button8 {
+  position: relative;
+  width: 200px !important;
+  height: 20px !important;
+  align: center;
+  display: inline-block;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  border: 2px solid;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.button8:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.button8:active {
+  background: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.item, .item1, .item2 {
+  background-color: #BBBBBB;
+  height: 2px;
+  width: 30px;
+  border-radius: 3px;
+  margin: 1px;
+}
+
+.selected, .selected1, .selected2 {
+  background-color: #FFFFFF;
+}
+
+.div1 {
+  width: 400px;
+}
+
+.div1 ul {
+  display: inline-block;
+  width: 40px;
+  padding: 0;
+}
