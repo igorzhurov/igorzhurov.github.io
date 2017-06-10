@@ -9,7 +9,7 @@ audio.crossOrigin = "anonymous";
 
 audio.addEventListener('ended', function () {
 
-		//audio.play();
+		audio.play();
 	}, false);
 
 function play() {
