@@ -40,6 +40,7 @@ window.onload = function() {
 };
 
 audio.addEventListener('ended', function () {
+	source = null;
 	audio.play();
 }, false);
 
