@@ -61,7 +61,7 @@ function drawSpectrum(array) {
 		for ( var j = 8; j > (8-volume); j-- ){
 				//ctx.strokeStyle = 'rgba(255,255,255,1)';
 				ctx.fillStyle = 'rgba(255,255,255,1)';
-				roundRect(ctx, (i-2)/3*23+0,j*18,18,13, 2, true, false);
+				roundRect(ctx, (i-2)/3*23+0,j*18,18,13, 0, true, false);
 
 			}
 			//  console.log([i,value])
