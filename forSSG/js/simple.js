@@ -23,9 +23,10 @@ var node = context.createScriptProcessor(512, 1, 1);
 var analyser = context.createAnalyser();
 analyser.smoothingTimeConstant = 0.7;
 var FFT = analyser.fftSize = 32;
+var source = context.createMediaElementSource(audio);
 
 audio.addEventListener('canplay', function () {
-	var source = context.createMediaElementSource(audio);
+	
 	source.connect(analyser);
 	analyser.connect(node);
 	node.connect(context.destination);
@@ -40,7 +41,7 @@ window.onload = function() {
 };
 
 audio.addEventListener('ended', function () {
-	source = null;
+	//source = null;
 	audio.play();
 }, false);
 
