@@ -9,8 +9,8 @@ audio.crossOrigin = "anonymous";
 
 audio.addEventListener('ended', function () {
 
-		audio.play();
-	}, false);
+	audio.play();
+}, false);
 
 function play() {
 
@@ -38,6 +38,10 @@ window.onload = function() {
 
 	//console.log(bands);
 };
+
+audio.addEventListener('ended', function () {
+	audio.play();
+}, false);
 
 node.onaudioprocess = function () {
 	var array =  new Uint8Array(analyser.frequencyBinCount);
