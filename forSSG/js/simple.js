@@ -41,7 +41,6 @@ window.onload = function() {
 };
 
 audio.addEventListener('ended', function () {
-	//source = null;
 	audio.play();
 }, false);
 
@@ -50,52 +49,45 @@ node.onaudioprocess = function () {
 	analyser.getByteFrequencyData(array);
 	//console.log(array);
 
-
 	ctx.clearRect(0, 0, 1920, 255);
 	ctx.fillStyle = 'rgba(255,255,255,1)';
 	drawSpectrum(array);
 };
 
-
-
-
 function drawSpectrum(array) {
 	for ( var i = 2; i < (array.length); i=i+3 ){
 		var value = array[i];
 		var volume = parseInt((value+1)/FFT);
-
 		for ( var j = 8; j > (8-volume); j-- ){
 				//ctx.strokeStyle = 'rgba(255,255,255,1)';
 				ctx.fillStyle = 'rgba(255,255,255,1)';
 				roundRect(ctx, (i-2)/3*23+0,j*18,18,13, 3, true, false);
-
-			}
-			//  console.log([i,value])
 		}
 	}
+}
 
-	function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
-		if (typeof stroke == "undefined" ) {
-			stroke = true;
-		}
-		if (typeof radius === "undefined") {
-			radius = 5;
-		}
-		ctx.beginPath();
-		ctx.moveTo(x + radius, y);
-		ctx.lineTo(x + width - radius, y);
-		ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
-		ctx.lineTo(x + width, y + height - radius);
-		ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-		ctx.lineTo(x + radius, y + height);
-		ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-		ctx.lineTo(x, y + radius);
-		ctx.quadraticCurveTo(x, y, x + radius, y);
-		ctx.closePath();
-		if (stroke) {
-			ctx.stroke();
-		}
-		if (fill) {
-			ctx.fill();
-		}
+function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+	if (typeof stroke == "undefined" ) {
+		stroke = true;
 	}
+	if (typeof radius === "undefined") {
+		radius = 5;
+	}
+	ctx.beginPath();
+	ctx.moveTo(x + radius, y);
+	ctx.lineTo(x + width - radius, y);
+	ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+	ctx.lineTo(x + width, y + height - radius);
+	ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+	ctx.lineTo(x + radius, y + height);
+	ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+	ctx.lineTo(x, y + radius);
+	ctx.quadraticCurveTo(x, y, x + radius, y);
+	ctx.closePath();
+	if (stroke) {
+		ctx.stroke();
+	}
+	if (fill) {
+		ctx.fill();
+	}
+}
