@@ -2,10 +2,9 @@ var ctx = $("#canvas").get()[0].getContext("2d");
 
 var audio = null;
 audio = document.createElement("audio");
-audio.src = "audio/calypso.ogg";
+audio.src = "audio/blood.mp3";
 audio.controls = true;
 audio.crossOrigin = "anonymous";
-//audio._htmlAudioElement.crossOrigin = "anonymous";
 
 audio.addEventListener('ended', function () {
 
@@ -34,9 +33,7 @@ audio.addEventListener('canplay', function () {
 });
 
 window.onload = function() {
-	
 	audio.play();
-
 	//console.log(bands);
 };
 
@@ -49,6 +46,7 @@ node.onaudioprocess = function () {
 	analyser.getByteFrequencyData(array);
 	//console.log(array);
 
+++
 	ctx.clearRect(0, 0, 1920, 255);
 	ctx.fillStyle = 'rgba(255,255,255,1)';
 	drawSpectrum(array);
