@@ -45,8 +45,6 @@ node.onaudioprocess = function () {
 	var array =  new Uint8Array(analyser.frequencyBinCount);
 	analyser.getByteFrequencyData(array);
 	//console.log(array);
-
-++
 	ctx.clearRect(0, 0, 1920, 255);
 	ctx.fillStyle = 'rgba(255,255,255,1)';
 	drawSpectrum(array);
