@@ -5,19 +5,18 @@ audio = document.createElement("audio");
 audio.src = "audio/blood.mp3";
 audio.controls = true;
 audio.crossOrigin = "anonymous";
-
+/*
 audio.addEventListener('ended', function () {
-
 	audio.play();
 }, false);
-
+*/
+/*
 function play() {
-
 	audio.play();
 }
-
+*/
 var context = new AudioContext();
-var node = context.createScriptProcessor(2048, 1, 1);
+var node = context.createScriptProcessor(512, 1, 1);
 //Анализатор
 var analyser = context.createAnalyser();
 analyser.smoothingTimeConstant = 0.7;
