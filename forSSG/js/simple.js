@@ -17,7 +17,7 @@ function play() {
 }
 
 var context = new AudioContext();
-var node = context.createScriptProcessor(256, 1, 1);
+var node = context.createScriptProcessor(2048, 1, 1);
 //Анализатор
 var analyser = context.createAnalyser();
 analyser.smoothingTimeConstant = 0.7;
