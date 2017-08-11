@@ -15,7 +15,7 @@ function play() {
 	audio.play();
 }
 */
-/*
+
 var context = new AudioContext();
 var node = context.createScriptProcessor(512, 1, 1);
 //Анализатор
@@ -31,12 +31,12 @@ audio.addEventListener('canplay', function () {
 	node.connect(context.destination);
 	source.connect(context.destination);
 });
-*/
+
 window.onload = function() {
 	audio.play();
 	//console.log(bands);
 };
-/*
+
 audio.addEventListener('ended', function () {
 	audio.play();
 }, false);
@@ -87,4 +87,3 @@ function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
 		ctx.fill();
 	}
 }
-*/
