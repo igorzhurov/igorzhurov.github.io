@@ -247,15 +247,16 @@
 
 							<form class="row">
 
-								<!-- Hidden Required Fields -->
-								<input type="hidden" name="project_name" value="Site Name">
-								<input type="hidden" name="admin_email" value="igor.zhurov.work@gmail.com">
-								<!-- END Hidden Required Fields -->
-
 								<div class="columns eight">
-									<input type="text" class="u-max-full-width" name="email" placeholder="Your email..." required><br>
-									<input type="text" class="u-max-full-width" name="phone" placeholder="Your phone..." required><br>
-									<button type="button">Отправить</button>
+									<!-- Hidden Required Fields -->
+									<input type="hidden" name="project_name" value="Site Name">
+									<input type="hidden" name="admin_email" value="igor.zhurov.work@gmail.com">
+									<input type="hidden" name="form_subject" value="Form Subject">
+									<!-- END Hidden Required Fields -->
+									<input type="text" name="Name" placeholder="You name..." required><br>
+									<input type="text" name="E-mail" placeholder="You E-mail..." required><br>
+									<input type="text" name="Phone" placeholder="You phone..."><br>
+									<button>Send</button>
 								</div>
 								<div class="columns four">
 									<!--<a href="" class="window-cta">Отправить</a>-->
@@ -284,7 +285,7 @@
 
 		</div>
 
-
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js">	</script>
 		<script type="text/javascript" src="js/simple.js">	</script>
 		<script type="text/javascript" src="js/functions.js"> </script>
