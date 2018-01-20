@@ -45,7 +45,7 @@
 				var th = $(this);
 				$.ajax({
 					type: "POST",
-					url: "localhost:3000/mail.php", //Change
+					url: "mail.php", //Change
 					data: th.serialize()
 				}).done(function() {
 					alert("Thank you!");
