@@ -4,6 +4,10 @@ $(window).scroll(function(){
 
   var wScroll = $(this).scrollTop();
 
+    $('#my-header').css({
+      'transform' : 'translate(0px, '+ wScroll /20 +'%)'
+    });
+
   if (wScroll <= pContainerHeight) {
 
     $('.logo').css({
