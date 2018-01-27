@@ -4,6 +4,7 @@
 			$(".palka1,.palka2,.palka3,.palka4").hide();
 			$(".blur-menu").hide();
 			$(".bmenu-ober").hide();
+			$(".bmenu").hide();
 			$("#my-footer").hide();
 			$("footer").hide();
 			$(".right").hide();
@@ -21,7 +22,8 @@
 				$("#triangle-bottomleft, .bottom-text").hide();
 				$(".my-content").show();
 				$(".blur-menu").show(1000);
-				$(".bmenu-ober").show();
+				$(".bmenu-ober").show(0);
+				$(".bmenu").show(2000);
 				$("#my-footer").show();
 				$(".right").show();
 				$("footer").show();
@@ -69,7 +71,7 @@ var ctx = $("#canvas").get()[0].getContext("2d");
 
 var audio = null;
 audio = document.createElement("audio");
-audio.src = "audio/blood.mp3";
+audio.src = "audio/titov.mp3";
 audio.controls = true;
 audio.crossOrigin = "anonymous";
 /*
