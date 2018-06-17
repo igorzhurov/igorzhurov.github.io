@@ -4,10 +4,6 @@ $(window).scroll(function(){
 
   var wScroll = $(this).scrollTop();
 
-    $('#my-header').css({
-      'transform' : 'translate(0px, '+ wScroll /20 +'%)'
-    });
-
   if (wScroll <= pContainerHeight) {
 
     $('.logo').css({
@@ -49,22 +45,6 @@ $(window).scroll(function(){
 
   }
 
-/*
-  if(wScroll > 100) {
-
-    $('.bmenu').each(function(i){
-
-    $('.bmenu').eq(i).animate({
-      width: "70%",
-      opacity: 0.4,
-      marginLeft: "0.6in",
-      fontSize: "3em",
-      borderWidth: "10px"
-      transform: "translateY(100px)"
-    }, 500 );
-  });
-}
-*/
 /*
   // Floating Elements
 

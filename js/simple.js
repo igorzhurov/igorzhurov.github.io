@@ -1,10 +1,8 @@
 		$(document).ready(function(){
-			var elem = document.getElementById('spec');
+			
 			$(".my-content").hide();
 			$(".palka1,.palka2,.palka3,.palka4").hide();
 			$(".blur-menu").hide();
-			$(".bmenu-ober").hide();
-			$(".bmenu").hide();
 			$("#my-footer").hide();
 			$("footer").hide();
 			$(".right").hide();
@@ -13,18 +11,13 @@
 				//$(".site-header").css({"opacity" : "0" , "transition": "ease-in-out all 2s"});
 				//$(".site-header").fadeOut(2000);
 				$("header").removeClass("site-header");
-				$(".site-header").removeClass("spectrum-cont");
-				elem.parentNode.removeChild(elem);
 				$("header").addClass("main-site");
 				$(".spectrum").hide();
 				$(".enter-site").hide();
-				$(".left-text-1, .left-text-2").hide();
 				$(".palka1,.palka2,.palka3,.palka4").show();
 				$("#triangle-bottomleft, .bottom-text").hide();
 				$(".my-content").show();
 				$(".blur-menu").show(1000);
-				$(".bmenu-ober").show(0);
-				$(".bmenu").show(2000);
 				$("#my-footer").show();
 				$(".right").show();
 				$("footer").show();
@@ -52,7 +45,7 @@
 				var th = $(this);
 				$.ajax({
 					type: "POST",
-					url: "localhost:3000/mail.php", //Change
+					url: "mail.php", //Change
 					data: th.serialize()
 				}).done(function() {
 					alert("Thank you!");
@@ -72,7 +65,7 @@ var ctx = $("#canvas").get()[0].getContext("2d");
 
 var audio = null;
 audio = document.createElement("audio");
-audio.src = "audio/titov.mp3";
+audio.src = "audio/blood.mp3";
 audio.controls = true;
 audio.crossOrigin = "anonymous";
 /*
