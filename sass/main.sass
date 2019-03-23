@@ -1,0 +1,167 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $gray
+	opacity: 1
+
+*:-moz-placeholder
+	color: $gray
+	opacity: 1
+
+*::-moz-placeholder
+	color: $gray
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $gray
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $gray
+body input:required:valid,
+body textarea:required:valid
+	color: $gray
+
+//--------------------------------------------------
+
+html
+	height: 100%
+	width: 100%
+
+body
+	background-color: #fff
+	margin: 0
+	padding: 0
+	height: 100%
+	width: 100%
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $roboto
+	overflow-x: hidden
+	opacity: 1
+
+.container-fluid
+	padding: 0
+
+.rect-left
+	//display: flex
+	//position: absolute 
+	//width: 300px
+	height: 100vh
+	background: linear-gradient(135deg, #565656, #008EBB)
+	//align-items: center
+	.photo
+		position: relative
+		margin: 40px auto
+		border-radius: 50%
+		height: 200px
+		width: 200px
+		background:
+			image: url(../img/photo.jpg)
+			size: cover
+	.text-block
+		color: white
+		width: 90%
+		margin: auto
+		cite
+			font-size: 12px
+			top: 30px
+		.TE
+			position: relative
+			float: right
+			margin-top: 15px
+			font-size: 12px
+
+.social
+	position: absolute
+	left: 0
+	bottom: 0
+	margin: auto
+	height: 50px
+	width: 164px
+	ul, li
+		margin: 6px 0
+		padding: 0
+		list-style-type: none
+		height: 38px
+		li
+			height: 38px
+			margin: 0
+			display: inline-block
+			a
+				color: white
+				display: block
+				font-size: 17px
+				background-color: rgba(white, 0)
+				height: 38px
+				width: 38px
+				text-align: center
+				line-height: 38px
+				border-radius: 10em
+				@include transition (all 0.5s ease-in-out)
+				&:hover
+					color: $red
+
+.rect-right
+	position: absolute 
+	width: 1000px
+	height: 100vh
+	background: linear-gradient(to right, transparent 0%, rgba(black, 0.1) 100%)
+	right: 0
+	z-index: 100
+
+.line
+	position: relative
+	padding-left: 20px
+	right: 15px
+	height: 50px
+	width: 100%
+	background: linear-gradient(45deg, #EECFBA, #C5DDE8)
+	border: 3px solid white
+	border-radius: 25px 0 0 25px
+	display: inline-flex
+	justify-content: left
+	align-items: center
+	h3
+		color: white
+		font-size: 20px
+		font-family: $roboto-thin
+
+i
+	color: white
+	width: 50px
+
+.line-1
+	background: #476067
+	&-r
+		border-radius: 0
+
+.line-2
+	background: #356C7D
+	&-r
+		border-radius: 0
+
+.line-3
+	background: #1581A3
+	&-r
+		border-radius: 0
+//
+//.line-4
+//	top: 200px
+//
+//.line-5
+//	top: 250px
